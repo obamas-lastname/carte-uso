@@ -33,7 +33,7 @@ De exemplu, creșterea resurselor de stocare a dus la dispariția crizelor de sp
 aceasta este însă tot mai relevantă în arhitecturile \textit{cloud}.
 În zilele noastre, un utilizator stochează și folosește filme, poze, jocuri pe calculator, documente, mașini virtuale, arhive de informații;
 acestea ocupă spațiu considerabil pe un sistem laptop sau pe un dispozitiv mobil inteligent sau în Dropbox;
-acest spațiu ocupat nu mai este însă considerat o problemă dat fiind starea tehnologiilor și serviciilor de stocare.
+acest spațiu ocupat nu mai este însă considerat o problemă dată fiind starea tehnologiilor și serviciilor de stocare.
 
 De asemenea, cerințele ca datele să fie integre și valide (să nu fie corupte) este foarte importantă în sistemele ce lucrează cu date critice, dar mai puțin importantă în sistemele personale, care au mai multă nevoie de simplitate și flexibilitate.
 Printre criteriile după care putem compara și alege sistemele de fișiere se numără:
@@ -112,7 +112,7 @@ Fișierele sunt folosite de sistemul de operare pentru a organiza atât datele p
 În sistemul de fișiere sunt stocate și organizate poze, documente, notițe ale utilizatorului, dar și fișiere de configurare, fișiere de tip jurnal (\textit{log files}), baze de date necesare funcționării sistemului.
 
 Deoarece este important ca utilizatorii să poată accesa fișierele stocate, sistemul de operare pune la dispoziție o interfață pentru a putea lucra cu sistemul de fișiere.
-În funcție de preferințe, există două tipuri de interfețe, așa cum descris în \labelindexref{Capitolul}{ch:ui}: interfața în linia de comandă (CLI) expusă de interpretorul de comenzi (shellul CLI) și interfața grafică (GUI) prezentată de exemplu de un browser de sistem de fișiere.
+În funcție de preferințe, există două tipuri de interfețe, așa cum este descris în \labelindexref{Capitolul}{ch:ui}: interfața în linia de comandă (CLI) expusă de interpretorul de comenzi (shellul CLI) și interfața grafică (GUI) prezentată de exemplu de un browser de sistem de fișiere.
 
 \subsection{Structura ierarhică a sistemului de fișiere}
 \label{sec:fs:filesystem}
@@ -434,7 +434,7 @@ Pentru început, putem clasifica fișierele în două mari categorii: fișiere d
 
 \begin{itemize}
   \item \textbf{Fișierele de tip text} conțin linii compuse din caractere citibile (litere, cifre, semne de punctuație) fără să conțină elemente ce trebuie să fie interpretate de un program (precum grafice, cod executabil etc).
-    Fișierele text pot conține text simplu (\textit{plain text}), având extensia \texttt{.txt}, sau care conți cod sursă (de exemplu cu extensia \texttt{.c} sau \texttt{.java}) sau formate de prezentare precum HTML.
+    Fișierele text pot conține text simplu (\textit{plain text}), având extensia \texttt{.txt}, sau care conțin cod sursă (de exemplu cu extensia \texttt{.c} sau \texttt{.java}) sau formate de prezentare precum HTML.
   \item \textbf{Fișierele binare} sunt toate fișierele care nu sunt de tip text, putând reprezenta: imagini, programe executabile, melodii, fișiere comprimate etc.
 \end{itemize}
 
@@ -561,14 +561,14 @@ Sistemul de fișiere ne permite realizarea mai multor tipuri de operațiuni asup
 Operațiile uzuale asupra fișierelor includ: afișarea și schimbarea directorului, afișarea conținutului fișierului, listarea fișierelor dintr-un director, crearea fișierelor sau a directoarelor, copierea, mutarea, redenumirea sau ștergerea acestora, precum și arhivarea/dezarhivarea și realizarea unei versiuni de backup.
 
 O problemă poate apărea dacă doi utilizatori doresc să citească sau să modifice același fișier simultan, deoarece nu este clar dacă acțiunile celor doi nu se vor încurca reciproc.
-De aceea, una dintre responsabilitățile sistemului de fișiere este să mențină separarea resurselor resurselor între utilizatori.
+De aceea, una dintre responsabilitățile sistemului de fișiere este să mențină separarea resurselor între utilizatori.
 Vom prezenta detaliat aceste aspecte în \labelindexref{Capitolul}{ch:user}.
 
 \subsection{Afișarea și schimbarea directorului curent}
 \label{sec:fs:pwd-cd}
 
 Pentru a afișa directorul curent folosim comand \cmd{pwd} (\textit{print working directory}).
-De asemenea, dacă nu s-au efectuat manual schimbări asupra prompt-ului bash, aceste va afișa implict directorul în care ne aflăm.
+De asemenea, dacă nu s-au efectuat manual schimbări asupra prompt-ului bash, acesta va afișa implict directorul în care ne aflăm.
 Dacă dorim să ne mutăm în alt director, vom folosi comanda \cmd{cd $<$cale$>$}.
 Comanda \cmd{cd} are ca parametru o cale absolută sau relativă către destinația în care vrem să ajungem.
 
@@ -666,7 +666,7 @@ student@uso:~$ ls -l uso.git/README.md
 \begin{itemize}
   \item comanda de la linia 19 (\cmd{ls -l}) afișează toate informațiile (\texttt{-l}) ale tuturor fișierelor, ascunse și neascunse, din directorul curent;
     dimensiunea fișierelor este afișată în format inteligibil (\textit{human-readable}) (\texttt{-h});
-    observăm că sunt sunt afișate și directoarele standard \file{.} și \file{..}
+    observăm că sunt afișate și directoarele standard \file{.} și \file{..}
   \item comanda de la linia 38 primește o cale relativă pentru a-i afișa conținutul
   \item comanda de la linia 41 afișează toate fișierele, ascunse și neascunse, din rădăcina ierarhiei de fișiere și directoare (\file{/})
 \end{itemize}
@@ -791,7 +791,7 @@ total 0
 -rw-rw-r-- 1 student student 0 sep 30 12:20 dogs.txt
 \end{screen}
 
-Comanda \cmd{touch} are în principal rolul pentru a actualiza data ultimei accesări sau modificări asupra fișierului;
+Comanda \cmd{touch} are în principal rolul de a actualiza data ultimei accesări sau modificări asupra fișierului;
 dacă un fișier nu există, acesta este creat cu data curentă;
 crearea fișierului este un rol secundar al comenzii \cmd{touch}.
 În \labelindexref{Listing}{lst:fs:touch} folosim comanda \cmd{touch} pentru a schimba data ultimei modificări din \texttt{aug 20 20:57} în \texttt{sep 30 12:24}.
@@ -852,7 +852,7 @@ drwxrwxr-x 2 student student 4096 sep 30 17:32 games/heroes/3/nighon/mutare
 \end{screen}
 
 În \labelindexref{Listing}{lst:fs:dir-create} am creat directorul \file{games/} iar în cadrul său am creat subdirectoarele \file{warcraft/} și \file{lol/}.
-Comanda \cmd{ls} afișează conținutul unui diretor;
+Comanda \cmd{ls} afișează conținutul unui director;
 dacă dorim să afișăm informații despre director în sine folosim comanda opțiunea \texttt{-d} a comenzii \cmd{mkdir};
 o formă frecventă este folosirea opțiunii \texttt{-ld} pentru afișarea informațiilor despre director în format lung, cu atribute ale directorului.
 În partea finală a exemplului am folosit opțiunea \texttt{-p} a comenzii \cmd{mkdir} pentru a crea un director cu toate directoarele părinte necesare chiar dacă acestea nu există.
@@ -886,7 +886,7 @@ o formă frecventă este folosirea opțiunii \texttt{-ld} pentru afișarea infor
 
 Operațiile frecvente cu fișiere sunt copierea, mutarea sau redenumirea și ștergerea.
 Copierea înseamnă că un fișier sau director este duplicat în alt loc, și se găsește acum în două locuri.
-Mutarea / Redenumirea înseamnă cu un fișier sau director este acum mutat din locul său inițial în alt loc în sistemul de fișiere;
+Mutarea / Redenumirea înseamnă că un fișier sau director este acum mutat din locul său inițial în alt loc în sistemul de fișiere;
 spre deosebire de copiere, acum fișierul / directorul se găsește într-un singur loc.
 Ștergerea înseamnă eliminarea acelui fișier sau director din sistemul de fișiere;
 nu se va mai găsi în nici un loc.
@@ -922,7 +922,7 @@ student@uso:~$ diff -r uso.git/labs/ labs/
 student@uso:~$
 \end{screen}
 
-În \labelindexref{Listing}{lst:fs:cp}, în primă fază facem o copie, în același director a fișierul \file{passwd} în fișierul \file{passwd-copy}.
+În \labelindexref{Listing}{lst:fs:cp}, în primă fază facem o copie, în același director a fișierului \file{passwd} în fișierul \file{passwd-copy}.
 Apoi folosim comanda \cmd{ls -l} pentru a vedea că cele două fișiere au aceeași dimensiune (\texttt{2506}).
 Comanda \cmd{cmp} compară două fișiere și, dacă sunt identice, nu afișează nimic.
 Apoi copiem un fișier dintr-o cale relativă (\file{uso.git/labs/01-fs/wiki/basics.wiki}) în directorul curent, indicat de construcția \file{.} (punct).
@@ -969,7 +969,7 @@ La fiecare operație de mutare/redenumire am verificat că vechea intrare nu mai
 Ștergerea unei intrări înseamnă eliminarea acelei intrări și a conținutului său din sistemul de fișiere.
 Comanda cea mai folosită pentru ștergerea fișierelor și directoarelor este
 \cmd{rm $[$opțiuni$]$ $<$cale$>$}.
-Opțiunile cele mai des folosite pentru această comandă sunt:
+Opțiunile cel mai des folosite pentru această comandă sunt:
 
 \begin{itemize}
   \item \texttt{-r/-R}: se utilizează atunci când se dorește ștergerea recursivă a unui director
@@ -1016,7 +1016,7 @@ Chiar și așa sunt situații în care nu se știe precis unde este localizat un
 Pentru a căuta un fișier după numele său există două tipuri de căutări:
 
 \begin{itemize}
-  \item \textbf{căutare indexată} în care fișierele sunt inspectate și informațiile despre localizarea lor sunt reținute într-o bază de date cu fișierele indexată;
+  \item \textbf{căutare indexată} în care fișierele sunt inspectate și informațiile despre localizarea lor sunt reținute într-o bază de date cu fișierele indexate;
   \item \textbf{căutare exhaustivă} în cadrul unei zone din ierarhia sistemului de fișiere, trecând prin toate fișierele
 \end{itemize}
 
@@ -1059,7 +1059,7 @@ Unele distribuții Linux folosesc comanda \cmd{slocate} în locul comenzii \cmd{
 \subsubsection{Comanda find}
 \label{sec:fs:find}
 
-Pentru căutarea în ierarhia de directoare al fișierelor se folosește comanda \cmd{find}, comandă ce parcurge exhaustiv ierarhia de directoare.
+Pentru căutarea în ierarhia de directoare a fișierelor se folosește comanda \cmd{find}, comandă ce parcurge exhaustiv ierarhia de directoare.
 Comanda permite căutarea folosind diferite criterii, precum numele fișierului, utilizator, grup, tip, permisiuni, dimensiune, dată și altele.
 Exemple de opțiuni ale comenzii \cmd{find} pentru criterii de căutare:
 
@@ -1214,7 +1214,7 @@ Opțiunile comenzii \cmd{tar}, folosite mai sus, sunt:
 Cele mai folosite utilitare în Linux care realizează comprimarea unui fișier sunt:
 
 \begin{itemize}
-  \item \cmd{gzip}: are o viteză mai ridicată de compresie, dar o rată de mai scăzută (fișiere rezultat mai mari)
+  \item \cmd{gzip}: are o viteză mai ridicată de compresie, dar o rată de compresie mai scăzută (fișiere rezultat mai mari)
   \item \cmd{bzip2}: are viteză mai scăzută de compresie, dar o rată de compresie mai ridicată
 \end{itemize}
 
@@ -1271,8 +1271,8 @@ potrivite.
         rdiff-backup &
         Este un wrapper peste rsync.
         Adaugă suport pentru backupuri incrementale, adică: la un moment dat se realizează un backup complet pentru un director (asemănător rsync-ului).
-        Backup-urile incrementale salvează doar modificările ce s-au făcut de la ultimul backup pana în prezent, indiferent de tipul backup-ului.
-        În acest fel se poate reveni la orice stare anterioara, în măsura în care s-a realizat cel puțin un backup incremental la acea stare. \\
+        Backup-urile incrementale salvează doar modificările ce s-au făcut de la ultimul backup până în prezent, indiferent de tipul backup-ului.
+        În acest fel se poate reveni la orice stare anterioară, în măsura în care s-a realizat cel puțin un backup incremental la acea stare. \\
       \bottomrule
     \end{tabular}
   \end{center}
@@ -1286,7 +1286,7 @@ Informații detaliate despre backupuri periodice folosind \cmd{rsync} vor fi pre
 \label{sec:fs:redirect}
 
 Așa cum veți întâlni în \labelindexref{Secțiunea}{sec:process:fd}, o aplicație care rulează folosește niște intrări speciale (standard);
-în folosirea acestor intrări și a altor fișiere folosește descriptori de fișiere.
+în folosirea acestor intrări și a altor fișiere se folosesc descriptori de fișiere.
 
 Există 3 \textbf{fișiere speciale} utilizate de programele în execuție pentru a interacționa cu utilizatorii:
 
@@ -1748,7 +1748,7 @@ Acestea pot fi folosite în prompt-urile Windows precum PowerShell sau Command P
 \section{Sumar}
 \label{sec:fs:summary}
 
-Fișierele reprezintă unele dintre componentele sistemului de operare cele mai aproapiate de utilizator.
+Fișierele reprezintă unele dintre componentele sistemului de operare cele mai apropiate de utilizator.
 Utilizatorul folosește fișierele pentru a reține informații proprii sau pentru că acestea sunt folosite de aplicații.
 
 Fișierele sunt organizate într-o structură ierarhică, pentru acces rapid.
