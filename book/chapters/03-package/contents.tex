@@ -50,7 +50,7 @@ Vom vorbi despre acestea în \labelindexref{Secțiunea}{sec:package:all-in-one}.
 Un \textbf{pachet software} este o colecție de fișiere: executabile, de date, de configurare, de documentație.
 Un pachet este distribuit și apoi instalat pe un sistem pentru a adăuga o nouă funcționalitate acelui sistem.
 În urma instalării pachetului, fișierele din colecție ajung în sistemul de fișiere.
-Fișierele executabile sunt cele folosite pentru rula aplicațiile în formă de procese, așa cum vom preciza în \labelindexref{Secțiunea}{sec:process:process-program}.
+Fișierele executabile sunt cele folosite pentru a rula aplicațiile în formă de procese, așa cum vom preciza în \labelindexref{Secțiunea}{sec:process:process-program}.
 Fișierele de date sunt baze de date, imagini, sunete, filme folosite de aplicație pentru a rula.
 Fișierele de configurare permit modificarea parametrilor de funcționare a aplicației.
 Fișierele de documentație vor fi citite de utilizator pentru a ști cum să folosească și cum este proiectată aplicația.
@@ -269,11 +269,11 @@ Un utilizator nu trebuie să cunoască anatomia funcționării unui manager de p
 Utilizatorul trebuie să știe cum configurează repository-urile unui manager de pachete și apoi să instaleze sau să dezinstaleze pachetele.
 
 Operațiile uzuale realizate de un utilizator sunt descrise în continuare.
-Vom descrie în detaliul modul în care se realizează aceste operații pe distribuțiile bazate pe Debian și cele bazate pe RedHat în \labelindexref{Secțiunea}{sec:package:deb}, respectiv \labelindexref{Secțiunea}{sec:package:rpm}.
+Vom descrie în detaliu modul în care se realizează aceste operații pe distribuțiile bazate pe Debian și cele bazate pe RedHat în \labelindexref{Secțiunea}{sec:package:deb}, respectiv \labelindexref{Secțiunea}{sec:package:rpm}.
 Pentru alte distribuții/sisteme de operare și, deci, alte managere de pachete, agregăm comenzile uzuale în tabele în \labelindexref{Secțiunea}{sec:package:other}.
 
 Cele mai directe operații realizate cu pachete sunt instalarea și dezinstalarea pachetelor.
-Instalarea presupune că un pachet este despachetat și conținutul său este distribuit în sistemul de fișiere, eventual împreună cu rularea unui scripturi de configurare.
+Instalarea presupune că un pachet este despachetat și conținutul său este distribuit în sistemul de fișiere, eventual împreună cu rularea unui script de configurare.
 Dezinstalarea înseamnă ștergerea din sistemul de fișiere a conținutului unui pachet împreună cu rularea unor scripturi de deconfigurare.
 Prin intermediul unui manager de pachete, instalarea poate însemna descărcarea pachetului dorit dintr-un repository de pachete împreună cu pachete de care acesta depinde.
 În cazul interacțiunii cu repository-ul de pachete putem opta pentru descărcarea pachetului fără instalare.
@@ -289,7 +289,7 @@ Alte acțiuni, mai puțin frecvente, sunt:
 
 \begin{itemize}
   \item descărcarea surselor acelui pachet pentru a le putea investiga ulterior
-  \item listarea pachetele instalate
+  \item listarea pachetelor instalate
   \item căutarea unui pachet al cărui nume se potrivește unei expresii
   \item vizualizarea conținutului unui pachet instalat, adică ce fișiere din sistemul de fișiere corespund acelui pachet
   \item identificarea pachetului care conține un anumit fișier din sistemul de fișiere
@@ -304,7 +304,7 @@ Prin intermediul aplicațiilor GooglePlay\footnote{\url{https://play.google.com/
 Într-un magazin de aplicații, utilizatorii caută pachete sau instalează pachete.
 
 În urma unei comenzi de instalare, transparent utilizatorului, aplicația GooglePlay sau AppStore descarcă din depozit pachetul în format respectiv (\texttt{.apk} sau \texttt{.ipa}).
-După instalare, aplicația arele fișiere executabile, de date, de configurare, de documentație în sistemul de fișiere și este, în general, accesibilă prin intermediul unei icoane pe ecranul telefonului mobil.
+După instalare, aplicația are fișiere executabile, de date, de configurare, de documentație în sistemul de fișiere și este, în general, accesibilă prin intermediul unei icoane pe ecranul telefonului mobil.
 
 Depozitele de pachete folosite de aplicațiile GooglePlay și AppStore nu pot fi configurate, sunt preconfigurate în aplicație.
 Cu toate acestea pot fi folosite aplicații cu depozite neoficiale de aplicații, precum Cydia pe iOS\footnote{\url{https://cydia-app.com/}}.
@@ -316,14 +316,14 @@ instalarea acestor aplicații poate însemna instalarea de aplicații malițioas
 
 În Linux, pachetele sunt colectate în depozite (\textit{repository}-uri) pentru fiecare distribuție.
 Fiecare distribuție are apoi sub-depozite pentru fiecare versiune a distribuției, sub-depozit ce conține versiunile de pachete corespunzătoare.
-Sistemul de gestiunea a pachetelor, cuprinzând managerul de pachete și alte componente, este cel responsabil pentru interacțiunea cu depozitul de pachete, la comanda utilizatorului.
+Sistemul de gestiune a pachetelor, cuprinzând managerul de pachete și alte componente, este cel responsabil pentru interacțiunea cu depozitul de pachete, la comanda utilizatorului.
 
 Repository-ul de pachete este identificat printr-un URL care poate fi local (de exemplu CD-ROM) sau poate fi la distanță (acesta este modul uzual).
 Managerul de pachete are o zonă de configurare în care putem specifica URL-urile repository-urilor folosite.
 
 Pentru interacțiunea cu sistemul de gestiune a pachetelor, există aplicații dedicate.
 Acestea pot fi grafice sau în linia de comandă.
-De exemplu, pe sistemele bazate pe Debiam, există aplicația grafică Synaptic și utilitarul în linia de comandă \cmd{apt}.
+De exemplu, pe sistemele bazate pe Debian, există aplicația grafică Synaptic și utilitarul în linia de comandă \cmd{apt}.
 La fel, pe Fedora și alte distribuții, există aplicația grafică PackageKit și utilitarul în linia de comandă \cmd{dnf}.
 Aceste aplicații interacționează cu sistemul de gestiune a pachetelor, cu repository-uri și instalează pachete.
 Pentru operarea directă asupra pachetelor aceste aplicații folosesc o comandă dedicată care cunoaște formatul pachetelor: \cmd{dpkg} pe sistemele derivate din Debian și \cmd{rpm} pe sistemele derivate din RedHat.
@@ -804,7 +804,7 @@ Suplimentar permit configurări de securitate care pot fi realizate granular, do
 Un caz de utilizare pentru aceste sisteme de gestiune a pachetelor sunt soluțiile IoT (Internet of Things) despre care vom discuta în \labelindexref{Capitolul}{ch:embed}.
 Aceasta pentru că sistemele IoT au de obicei roluri foarte bine definite și dorim să instalăm ușor o aplicație software cu toate dependențele sale.
 
-În aceste sisteme există un pachet (o arhivă) care conține toate informațiile necesare rulării aplicație: aplicația, depdendențe, metadate, scripturi de instalare și configurare.
+În aceste sisteme există un pachet (o arhivă) care conține toate informațiile necesare rulării aplicației: aplicația, depdendențe, metadate, scripturi de instalare și configurare.
 
 Sistemele Ubuntu folosesc Snapcraft\footnote{\url{https://snapcraft.io/}}, o soluție care înglobează aplicațiile în pachete;
 un pachet se numește \textbf{snap}.
