@@ -65,13 +65,13 @@ Concret, sistemul de operare oferă:
   \item arbitrare a accesului la resurse partajate: dacă două sau mai multe procese accesează o resursă comună (de exemplu un fișier), atunci accesele trebuie să fie bine ordonate și, de exemplu, să nu suprascrie un proces informațiile celuilalt.
   \item mecanisme explicite de comunicare între procese: procesele comunică între ele pentru realizarea unei acțiuni mai complexe.
     Vom discuta în \labelindexref{Secțiunea}{sec:process:signal}, respectiv \labelindexref{Secțiunea}{sec:process:pipe} despre semnale și pipe-uri, două mecanisme de bază de comunicare între procese.
-  \item comportament echitabil al proceselor, prin asigurarea că un proces nu utiliza prea multe resurse: un proces poate utiliza foarte multă memorie sau foarte mult procesor și împiedica alte procese să ruleze, iar sistemul de operare are grijă să aloce fiecărui proces resurse în mod echitabil
+  \item comportament echitabil al proceselor, prin asigurarea că un proces nu utilizează prea multe resurse: un proces poate utiliza foarte multă memorie sau foarte mult procesor și împiedica alte procese să ruleze, iar sistemul de operare are grijă să aloce fiecărui proces resurse în mod echitabil
 \end{itemize}
 
 \section{Programe și procese}
 \label{sec:process:process-program}
 
-Am precizat mai sus că un proces rulează și folosește resursele sistemului pentru o anumită.
+Am precizat mai sus că un proces rulează și folosește resursele sistemului pentru o anumită acțiune.
 Pentru aceasta, un proces stochează în memorie instrucțiunile pe care trebuie să le execute.
 Cum ajung aceste instrucțiuni în memorie?
 
@@ -500,7 +500,7 @@ Un proces are o stare care arată dacă acesta rulează sau nu pe procesor.
 Un proces are nevoie de unul sau mai multe procesoare pentru a rula.
 Întrucât, de cele mai multe ori, sunt mai multe procese decât procesoare, nu toate procesele pot rula.
 Astfel unele procese rulează pe procesor, altele așteaptă să ruleze pe procesor;
-când un proces ajunge să ruleze pe un procesor spunem că este planificat (\textit{scheduled}) să ruleze pa acel procesor.
+când un proces ajunge să ruleze pe un procesor spunem că este planificat (\textit{scheduled}) să ruleze pe acel procesor.
 Iar unele procese pot fi blocate (\textit{sleeping}) în așteptarea unei operații de input/output.
 Simplificat, avem precizate stările și tranzițiile între stările unui proces în \labelindexref{Figura}{fig:process:state}.
 
@@ -669,7 +669,7 @@ Vizual, crearea unui proces este indicată în \labelindexref{Figura}{fig:proces
 În general, procesul care creează un nou process este un shell.
 Shellul poate fi grafic (precum \textbf{Windows Explorer}) sau poate fi în linia de comandă (precum \textbf{Bash}).
 De exemplu, în mediul grafic, atunci când folosim dublu click pe o icoană de pe ecran, pornim un proces;
-acel proces este creat de shellul grafic, care define procesul părinte al noului proces.
+acel proces este creat de shellul grafic, care devine procesul părinte al noului proces.
 Altfel, în linia de comandă, shellul creează un proces nou la introducerea unei comenzi.
 Prezentăm mai multe detalii în \labelindexref{Capitolul}{ch:cli}.
 
@@ -753,7 +753,7 @@ Acest proces creează aplicațiile/procesele pornite în mediul grafic în Windo
 Un proces shell în linia de comandă creează procese în momentul introducerii de comenzi din partea utilizatorului.
 Procesul nou creat și shellul folosesc simultan terminalul, adică modul în care utilizatorul poate transmite informații la ieșirea standard și modul în care se afișează mesaje la ieșirea standard.
 Dacă atât procesul nou creat cât și shellul afișează informații la ieșirea standard, aceste afirmații vor fi agregate și afișate la terminal.
-Dacă însă trimitem informații la intrarea standard, prin terminal, doar procesul nou creat la va accesa.
+Dacă însă trimitem informații la intrarea standard, prin terminal, doar procesul nou creat le va accesa.
 
 Spunem că, în cadrul terminalului, avem un singur proces care deține controlul intrării standard, adică un singur proces care este în \textbf{foreground}.
 În general, modul de funcționare a shellului, detaliat în \labelindexref{Secțiunea}{sec:cli:shell}, este:
@@ -777,7 +777,7 @@ procesul poate rula în continuare dar nu mai are acces la informații furnizate
 
 Întrucât un singur proces poate avea acces la intrarea terminalului, putem avea un singur proces în foreground.
 Putem avea însă oricâte procese în background.
-În background proceswle se pot găsi în două stări: rulând (\textit{running}) sau suspendate (\textit{stopped}, \textit{suspeneded}, \textit{paused}).
+În background procesele se pot găsi în două stări: rulând (\textit{running}) sau suspendate (\textit{stopped}, \textit{suspeneded}, \textit{paused}).
 Decizia de a suspenda și de a scoate un proces din starea suspendat aparține utilzatorului.
 Un proces suspendat nu se poate găsi în foreground, ci doar în background.
 
@@ -961,7 +961,7 @@ De aceea, dacă dintr-un motiv sau altul procesul init moare sau este omorât, s
 
 Pentru a evita ca un singur proces să aibă rolurile procesului init, pe sistemele Ubuntu a apărut soluția folosirii mai multor procese init: câte un proces init pentru fiecare sesiune.
 Când o sesiune dată este creată, se creează un proces init dedicat acelei sesiuni, care va fi vârful ierarhiei de procese din acea sesiune.
-Acest proces init al sesiune adoptă procesele orfane din acea sesiune.
+Acest proces init al sesiunii adoptă procesele orfane din acea sesiune.
 Mai multe despre această caracteristică sunt prezentate în \labelindexref{Secțiunea}{sec:auto:system:service}.
 
 \section{Procese și fișiere}
@@ -1159,7 +1159,7 @@ Există următoarele situații pentru încheierea unui proces:
 Terminarea (omorârea) unui proces se realizează de un alt proces care are permisiuni;
 în general, acest lucru înseamnă un proces care aparține aceluiași utilizator sau utilizatorului administrativ.
 În Windows terminarea unui proces are loc prin transmiterea unei notificări, numite excepție, de la un proces la altul.
-În mod similar, în Linux, terminaraea unui proces are loc prin transmiterea unui semnal către acesta.
+În mod similar, în Linux, terminarea unui proces are loc prin transmiterea unui semnal către acesta.
 Primirea unui semnal duce, în multe situații (nu toate), la terminarea procesului.
 Transmiterea unui semnal se face prin intermediul utilitarelor din familia \cmd{kill}.
 În \labelindexref{Listing}{lst:process:kill-terminate} comanda \cmd{kill} trimite un semnal procesului \cmd{sleep}, care are PID-ul \texttt{11450} ducând la terminarea procesului.
@@ -1254,7 +1254,7 @@ De exemplu, un proces poate alege să ignore anumite semnale.
 Cu toate acestea, două semnale nu pot fi ignorate: semnalul \texttt{SIGSTOP} și semnalul \texttt{SIGKILL} care duc, respectiv, la suspendarea și omorârea procesului.
 
 Dacă dorim să transmitem semnale mai multor procese putem folosi comanda \cmd{pkill}.
-Aceasta permite transmiterea unui semnale către procesele care au un anumit atribut;
+Aceasta permite transmiterea unui semnal către procesele care au un anumit atribut;
 de exemplu către procesele care aparțin unui anumit utilizator.
 În \labelindexref{Listing}{lst:process:pkill} cele trei comenzi trimit semnalul implicit (\texttt{SIGTERM}), respectiv tuturor proceselor \cmd{sleep}, tuturor proceselor utilizatorului \texttt{dan} și tuturor proceselor al căror proces părinte este \texttt{18291}.
 
@@ -1345,7 +1345,7 @@ student@uso:~$ ps -e --no-header | wc -l
 \end{screen}
 
 În unele situații avem mai multe comenzi înlănțuite prin operatorul pipe într-o singură linie de comandă.
-În \labelindexref{Listing}{lst:process:multiple-pipes} am extras din ierarhia \file{/usr/include} cele 5 fișiere care conțin cel mai des șirul \texttt{FILE} (pentru lucrul cu fișîere în limbajul C).
+În \labelindexref{Listing}{lst:process:multiple-pipes} am extras din ierarhia \file{/usr/include} cele 5 fișiere care conțin cel mai des șirul \texttt{FILE} (pentru lucrul cu fișiere în limbajul C).
 
 \begin{screen}[caption={Comenzi multiple înlănțuite prin pipe (one-liner)},label={lst:process:multiple-pipes}]
 student@uso:~$ grep -rwc FILE /usr/include/ | grep -v ':0' | sort -n -t ':' -k2 | tail -5
@@ -1439,7 +1439,7 @@ Un proces care rulează în background (\textit{background process}) este un pro
 Acesta rulează în general neinteractiv.
 Procesul care rulează în background poate fi readus în foreground și recuperează accesul la terminal și la intrarea standard.
 
-Un proces care rulează în background poate fi detașat de la terminal.
+Un proces care rulează în background poate fi detașat de terminal.
 Detașarea de terminal înseamnă că acel proces pierde orice legătură cu terminalul dat, legătură ce nu poate fi restaurată.
 Descriptorii standard ai unui proces detașat de terminal nu mai referă terminalul, ci referă fișiere sau alte tipuri de intrări (pipe, sockeți).
 În listarea proceselor sistemului putem observa că anumite procese nu au terminal asociate.
@@ -1701,7 +1701,7 @@ Pentru monitorizare folosim \cmd{top} sau \cmd{htop}.
 Pe Windows putem folosi Task Manager sau Process Explorer.
 
 Utilitarele \cmd{top} și \cmd{htop} oferă o interfață interactivă de afișare periodică a informațiilor despre procese.
-Sun utile pentru o privire dinamică a proceselor sistemului.
+Sunt utile pentru o privire dinamică a proceselor sistemului.
 Simpla rulare a comenzilor \cmd{top} sau \cmd{htop} duce la afișarea unui ecran.
 În acel ecran putem folosi apoi diferite opțiuni pentru a selecta anumite procese sau anumite atribute sau moduri de sortare.
 
@@ -1815,7 +1815,7 @@ Loaderul interpretează programul executabil, apoi alocă memoria aferentă pent
 După aceasta se stabilește ca procesul să înceapă execuția de la \textbf{punctul de intrare} (\textit{entry point}) care este o funcție similară funcției \texttt{main()}.
 Apoi procesul începe să ruleze din momentul în care este planificat pe un procesor.
 
-Acțiunille unui loader sunt prezentate în \labelindexref{Figura}{fig:process:loader}.
+Acțiunile unui loader sunt prezentate în \labelindexref{Figura}{fig:process:loader}.
 
 \begin{figure}[!htbp]
   \centering
