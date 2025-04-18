@@ -21,7 +21,7 @@ Informațiile despre conturile de utilizatori sunt utile nu doar utilizatorilor 
 Deși utilizatorul obișnuit are în general un singur cont pe sistemul propriu, informațiile despre conturile de utilizator îi sunt necesare pentru a înțelege ce acțiuni poate executa pe sistemul de operare, pentru ce acțiuni are nevoie de accesul la un cont privilegiat.
 De asemenea, poate să creeze la nevoie un cont pentru un prieten sau o rudă pe un sistem al său.
 Sau se poate autentifica pe sistemul altcuiva și va trebui să aibă grijă ce informații lasă pe acel sistem.
-Pentru un utilizator cu permisiuni speciale (\textit{power user}) sau un administrator, informațiile despre și operațiile cu utilizatori sunt esențiale pentru a asigura accesul mai multor utilizatori fizici la un sistem dat, pentru a se asigura de separarea resurselor între aceștia și între procesele acestora și, în general, pentru a garanta securitatea sistemului.
+Pentru un utilizator cu permisiuni speciale (\textit{power user}) sau un administrator, informațiile despre operațiile cu utilizatori sunt esențiale pentru a asigura accesul mai multor utilizatori fizici la un sistem dat, pentru a se asigura de separarea resurselor între aceștia și între procesele acestora și, în general, pentru a garanta securitatea sistemului.
 
 Din punctul de vedere al sistemului de operare, un cont de utilizator este reprezentat de obicei sub forma unui nume de utilizator (\textit{username}).
 Acesta este un șir de caractere cu care este identificat utilizatorul.
@@ -116,10 +116,10 @@ La fel, dacă rulăm greșit o comandă privilegiată, aceasta poate afecta irem
 \begin{note}[Comanda rm -fr /]
   Comanda \cmd{rm -fr /} este celebră pentru că poate fi folosită pentru a șterge tot sistemul de fișiere.
   Dacă este folosită de contul de \texttt{root} această comandă șterge conținutul sistemului de fișiere începând de la directorul rădăcină (\texttt{/}).
-  Aveți grijă în folosire acestei comenzi și, ori de câte ori ștergeți un fișier, aveți grijă ce argumente transmiteți comenzii \cmd{rm}.
+  Aveți grijă în folosirea acestei comenzi și, ori de câte ori ștergeți un fișier, aveți grijă ce argumente transmiteți comenzii \cmd{rm}.
 \end{note}
 
-De aceea, sistemele de operare moderne pun la dispoziția utilizatorul metode de realizare de acțiuni privilegiate care să nu necesite accesarea directă a contului privliegiat.
+De aceea, sistemele de operare moderne pun la dispoziția utilizatorului metode de realizare de acțiuni privilegiate care să nu necesite accesarea directă a contului privliegiat.
 Astfel că, în folosirea superuserului, există următoarele recomandări de folosire:
 
 \begin{itemize}
@@ -460,7 +460,7 @@ Informațiile despre utilizatori (nume de utilizator, identificator de utilizato
 \label{sec:user:linux-user-info}
 
 În Linux, informațiile despre utilizatori sunt stocate în fișiere de configurare dedicate.
-În scenarii de administrare mai complexe (care nu fac subiectul acestei cărți), aceste informații sunt stocate într-o baza de date.
+În scenarii de administrare mai complexe (care nu fac subiectul acestei cărți), aceste informații sunt stocate într-o bază de date.
 Fișierele de configurare în care sunt reținute informații despre utilizatori sunt indicate în \labelindexref{Tabelul}{table:user:info-files}.
 
 \begin{table}[!htb]
